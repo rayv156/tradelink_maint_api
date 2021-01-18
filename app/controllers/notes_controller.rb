@@ -1,11 +1,11 @@
 class NotesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_note, only: [:show, :update, :destroy]
   before_action :authorized
 
   # GET /notes
   def index
     @notes = Note.where(user_id: @user.id)
-
     render json: @notes
   end
 
@@ -17,7 +17,7 @@ class NotesController < ApplicationController
   # POST /notes
   def create
     @note = Note.new(note_params)
-
+    @note.user_id = current_user.id
     if @note.save
       render json: @note, status: :created, location: @note
     else
