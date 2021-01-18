@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
         token = encode_token({user_id: @user.id})
-        render json: {user: @user, token: token}
+        render json: {user: @user, token: token, is_admin: @user.is_admin}
     elsif @user && !@user.authenticate(params[:password])
         render json: {error: "User exists but invalid password"}
     else 
