@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :trailers
   resources :trucks
   resources :notes
   resource :users, only: [:create]
