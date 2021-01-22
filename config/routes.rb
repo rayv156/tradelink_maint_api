@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :forklifts
   resources :trailers
   resources :trucks
   resources :notes

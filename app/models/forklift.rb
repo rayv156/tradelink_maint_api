@@ -1,0 +1,2 @@
+class Forklift < ApplicationRecord
+end
