@@ -4,8 +4,13 @@ class NotesController < ApplicationController
 
   # GET /notes
   def index
+    if current_user.is_admin
+      @notes = Note.all
+    render json: @notes
+    else
     @notes = Note.where(user_id: @user.id)
     render json: @notes
+    end
   end
 
   # GET /notes/1
