@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :repairs
+  resources :requests
   resources :forklifts
   resources :trailers
   resources :trucks

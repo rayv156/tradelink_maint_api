@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  equipment: MyString
+  odometer: 1
+  repair: one
+  status: MyString
+
+two:
+  date: MyString
+  equipment: MyString
+  odometer: 1
+  repair: two
+  status: MyString
