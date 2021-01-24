@@ -21,10 +21,10 @@
 #     status: "Active"
 # )
 
-Request.create(date: "01/23/2021", equipment: "Forklift", odometer: 10000, status: "pending", user_id: 3)
+#Request.create(date: "01/23/2021", equipment: "Forklift", odometer: 10000, status: "pending", user_id: 3)
 
 Repair.create([
-    { repair_type: "Grease", description: "forklift is needing grease", pictures: "test", status: "pending", request_id: 1}, 
-    { repair_type: "PM", description: "forklift is needing pm", pictures: "test", status: "pending", request_id: 1},
-    { repair_type: "Brakes", description: "forklift is needing new brake pads", pictures: "test", status: "pending", request_id: 1}
+    { repair_type: "Grease", description: "forklift is needing grease", pictures: "test", status: "pending", request_id: 2}, 
+    { repair_type: "PM", description: "forklift is needing pm", pictures: "test", status: "pending", request_id: 2},
+    { repair_type: "Brakes", description: "forklift is needing new brake pads", pictures: "test", status: "pending", request_id: 2}
 ])
